@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>PDF Viewer Deluxe</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Get PDF.js: https://mozilla.github.io/pdf.js/getting_started/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';</script>
+</head>
+<body>
+    <div id="landscape-warning">Please rotate your device to landscape mode.</div>
+
+    <div class="app-container">
+        <div class="pdf-viewer-wrapper">
+            <div id="pdf-viewer-box">
+                <canvas id="pdfCanvas"></canvas>
+                <canvas id="fluidCanvas"></canvas>
+                <canvas id="drawingCanvas"></canvas>
+            </div>
+            <div class="pdf-navigation">
+                <button id="prevPage" disabled>&lt; Prev</button>
+                <span id="pageIndicator">Page <span id="page_num">0</span> / <span id="page_count">0</span></span>
+                <button id="nextPage" disabled>Next &gt;</button>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <input type="file" id="pdfFile" accept=".pdf">
+            <hr>
+            <label class="control-toggle">
+                <input type="checkbox" id="toggleFluid"> Fluid Effect
+            </label>
+            <label class="control-toggle">
+                <input type="checkbox" id="toggleDraw"> Draw (Permanent)
+            </label>
+            <label class="control-toggle">
+                <input type="checkbox" id="toggleDisappearingDraw"> Disappearing Ink
+            </label>
+            <button id="clearDrawing">Clear Drawings</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
