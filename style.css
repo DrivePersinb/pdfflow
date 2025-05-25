@@ -1,0 +1,119 @@
+/* ... (previous styles remain the same) ... */
+
+/* Instrument Detail Modal Specific Styles */
+#instrument-detail-content img.detail-img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+}
+#instrument-detail-content h2 { margin-top: 0; color: #007bff; }
+#instrument-detail-content .detail-price { font-size: 1.5em; font-weight: bold; color: #28a745; margin-bottom: 15px; }
+#instrument-detail-content .detail-description { margin-bottom: 20px; line-height: 1.7; }
+
+/* Specs Table Styling (for ordered and categorized specs) */
+#instrument-detail-content .specs-section h3 { margin-bottom: 10px; }
+#instrument-detail-content .specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+#instrument-detail-content .specs-table th,
+#instrument-detail-content .specs-table td {
+    border: 1px solid #eee;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+#instrument-detail-content .specs-table .spec-key {
+    background-color: #f8f9fa;
+    width: 35%; /* Give spec names a fixed width */
+    font-weight: bold;
+}
+#instrument-detail-content .specs-table .spec-category-header td {
+    background-color: #e9ecef;
+    font-weight: bold;
+    color: #495057;
+    padding: 10px;
+    border-top: 2px solid #dee2e6; /* Separator for category */
+    margin-top: 5px;
+}
+#instrument-detail-content .specs-table .spec-category-item .spec-key {
+    padding-left: 25px; /* Indent items under a category */
+    background-color: #fdfdfe; /* Slightly different background for sub-items */
+    width: 33%; /* Adjust width due to padding */
+}
+#instrument-detail-content .specs-table .spec-category-item .spec-value {
+    /* Style for values of categorized items if needed */
+}
+
+
+/* FAQ Section Styling */
+#instrument-detail-content .faq-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+#instrument-detail-content .faq-section h3 {
+    margin-bottom: 15px;
+}
+#instrument-detail-content .faq-item {
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    /* box-shadow: 0 1px 2px rgba(0,0,0,0.05); */
+}
+#instrument-detail-content .faq-question {
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #e9ecef;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#instrument-detail-content .faq-question::after {
+    content: '+'; /* Collapsed state */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#instrument-detail-content .faq-item.open .faq-question::after {
+    content: '−'; /* Expanded state */
+}
+#instrument-detail-content .faq-answer {
+    padding: 15px;
+    font-size: 0.9em;
+    line-height: 1.6;
+    display: none; /* Hidden by default */
+    border-top: 1px solid #e0e0e0;
+}
+#instrument-detail-content .faq-item.open .faq-answer {
+    display: block;
+}
+
+
+#instrument-detail-content .detail-buy-links { margin-top: 20px; }
+#instrument-detail-content .detail-buy-links h4 { margin-bottom: 10px; }
+#instrument-detail-content .detail-buy-links ul { list-style: none; padding: 0; }
+#instrument-detail-content .detail-buy-links li { margin-bottom: 8px; }
+#instrument-detail-content .detail-buy-links a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    transition: background-color 0.2s ease;
+}
+#instrument-detail-content .detail-buy-links a:hover { background-color: #0056b3; }
+
+/* ... (rest of the CSS) ... */

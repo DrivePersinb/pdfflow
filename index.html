@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartInstrumentPrix</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- If you have Google AdSense, your AdSense script often goes in the <head> -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script> -->
+</head>
+<body>
+    <header>
+        <h1>SmartInstrumentPrix</h1>
+        <p>Your Guide to Musical Instruments</p>
+        <!-- Ad Placeholder: Header Banner -->
+        <div class="ad-placeholder header-ad">
+            <!-- Google AdSense Code for Header Banner would go here -->
+            <p>Header Ad (e.g., 728x90)</p>
+        </div>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            <div class="filter-group">
+                <label for="category-filter">Category:</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="brand-filter">Brand:</label>
+                <select id="brand-filter">
+                    <option value="all">All Brands</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="default">Default</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                </select>
+            </div>
+            <button id="reset-filters">Reset Filters</button>
+
+            <div class="compare-section">
+                <h2>Compare Instruments</h2>
+                <div id="compare-slots"></div>
+                <button id="compare-now-btn" disabled>Compare Now (<span id="compare-count">0</span>/3)</button>
+                <button id="clear-compare-btn">Clear Comparison</button>
+            </div>
+
+            <!-- Ad Placeholder: Sidebar -->
+            <div class="ad-placeholder sidebar-ad">
+                <!-- Google AdSense Code for Sidebar Ad would go here -->
+                <p>Sidebar Ad (e.g., 200x200 or 250x250)</p>
+            </div>
+        </aside>
+
+        <section class="instrument-listings">
+            <div id="instrument-grid">
+                <!-- Instrument cards will be populated by JS -->
+                <!-- An in-grid ad might be inserted here by JS or be a static element -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 SmartInstrumentPrix</p>
+    </footer>
+
+    <!-- Buy Links Modal -->
+    <div id="buy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-buy-modal">&times;</span>
+            <h3 id="buy-modal-title">Buy From</h3>
+            <ul id="buy-links-list"></ul>
+        </div>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div id="comparison-modal" class="modal">
+        <div class="modal-content large">
+            <span class="close-button" id="close-comparison-modal">&times;</span>
+            <h3>Instrument Comparison</h3>
+            <div id="comparison-table-container"></div>
+        </div>
+    </div>
+
+    <!-- Instrument Detail Modal -->
+    <div id="instrument-detail-modal" class="modal">
+        <div class="modal-content large">
+            <span class="close-button" id="close-detail-modal">&times;</span>
+            <div id="instrument-detail-content">
+                <!-- Detailed content will be populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="instruments-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
